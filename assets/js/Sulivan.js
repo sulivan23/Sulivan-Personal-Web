@@ -126,6 +126,7 @@ $(document).ready(function(){
         switch(typeOfPop)
         {
             case 'intern_detail':
+            case 'exp_detail':
                 src = '#editForm2';
             break;
             default :
@@ -168,6 +169,9 @@ $(document).ready(function(){
             case 'intern_detail':
                 controller = "dashboard/getDetailInternById";
             break;
+            case 'exp_detail':
+                controller = "dashboard/getDetailExpById";
+            break;
         }
         var url = base_url+controller;
         xhrData = xhrRequest;
@@ -185,7 +189,8 @@ $(document).ready(function(){
                     case 'apps'             :
                     case 'intern'           :
                     case 'intern_detail'    :
-                    case 'experience'    :
+                    case 'experience'       :
+                    case 'exp_detail'       :
                         var listUpdateApps = document.querySelectorAll('#update_'+typeOfPop+' .form-control');
                         for(x = 0; x < listUpdateApps.length; x++){
                             var listName = listUpdateApps[x].getAttribute('name');
@@ -232,6 +237,7 @@ $(document).ready(function(){
         switch(typeOfDelete)
         {
             case 'intern_detail':
+            case 'exp_detail':
                 var src = '#deleteDetail';
             break;
             default :
@@ -277,9 +283,16 @@ $(document).ready(function(){
                 controller = "add_intern";
             break;
 
+            case 'experience':
+                controller = "add_experience";
+            break;
+
             case 'intern_detail':
                 controller = "add_intern_detail";
-                console.log(form_data);
+            break;
+
+            case 'exp_detail':
+                controller = "add_exp_detail";
             break;
 
             case 'apps_img':
@@ -323,8 +336,14 @@ $(document).ready(function(){
             case 'delete_intern':
                 controller = "delete_intern";
             break;
+            case 'delete_experience':
+                controller = "delete_experience";
+            break;
             case 'delete_intern_detail':
                 controller = "delete_intern_detail";
+            break;
+            case 'delete_experience_detail':
+                controller = "delete_experience_detail";
             break;
             case 'delete_apps_img':
                 controller = "delete_image";
@@ -361,8 +380,14 @@ $(document).ready(function(){
             case 'update_intern':
                 controller = "edit_intern/"+id;
             break;
+            case 'update_experience':
+                controller = "edit_experience/"+id;
+            break;
             case 'update_intern_detail':
                 controller = "edit_detail_intern/"+id;
+            break;
+            case 'update_exp_detail':
+                controller = "edit_detail_exp/"+id;
             break;
         }
         url = base_url+"dashboard/"+controller;
@@ -426,7 +451,7 @@ $(document).ready(function(){
                     var target = e.target;
                     data = target.attributes.data.value;
                     console.log(data);
-                    if(data == "intern_detail"){
+                    if(data == "intern_detail" || data == "exp_detail"){
                         var typeOfData = $('.modal-body form.form2').attr('data');
                     }else{
                         var typeOfData = $('.modal-body form').attr('data');
@@ -485,13 +510,15 @@ $(document).ready(function(){
     var radio = document.querySelectorAll('#radioButton');
     for(i = 0; i < radio.length; i++){
         radio[i].addEventListener('click',function(){
-            document.querySelector('input[name="experience_id"]').setAttribute('value', this.value);
             if(this.name == "radio"){
                 url = base_url+"dashboard/getDetailIntern";
+                var getName = 'internship_id';
             }
             if(this.name == "experience"){
                 url = base_url+"dashboard/getDetailExp";
+                var getName = 'experience_id';
             }
+            document.querySelector('input[name="'+getName+'"]').setAttribute('value', this.value);
             var detailTable = document.querySelector('table[id="table-2"] tbody');
             xhrGet = xhrRequest;
             xhrGet.open('POST',url, true);
@@ -505,20 +532,39 @@ $(document).ready(function(){
                         errorHandling(err+"<br", this.responseText);
                     }
                     resetToken(response[0].token);
-                    html = "";
+                    var html = "";
+                    var firstId = "";
                     for(x = 0; x < response.length; x++){
-                        intern_detail = response[0].data;
-                        html += "<tr>"+
+                        typeOfData = response[0].data;
+                        switch(typeOfData)
+                        {
+                            case 'intern_detail':
+                                firstId = response[0].detail_intern_id;
+                                html += "<tr>"+
                                     "<td>"+response[x].detail_intern_id+"</td>"+
                                     "<td>"+response[x].job_desc+"</td>"+
                                     "<td>"+response[x].date_time+"</td>"+
                                     "<td>"+
-                                        '<a onclick="popUpUpdate('+response[x].detail_intern_id+', intern_detail)" class="btn btn-primary text-white"><i class="fa fa-edit"></i></a> '+
-                                        '<a onclick="deleteData('+response[x].detail_intern_id+', intern_detail)" class="btn btn-danger text-white"><i class="fa fa-trash"></i></a> '+
+                                        '<a onclick="popUpUpdate('+response[x].detail_intern_id+', typeOfData)" class="btn btn-primary text-white"><i class="fa fa-edit"></i></a> '+
+                                        '<a onclick="deleteData('+response[x].detail_intern_id+', typeOfData)" class="btn btn-danger text-white"><i class="fa fa-trash"></i></a> '+
                                     '</td>'+
                                 "<tr>";
+                            break;
+                            case 'exp_detail' :
+                                firstId = response[0].detail_experience_id;
+                                html += "<tr>"+
+                                    "<td>"+response[x].detail_experience_id+"</td>"+
+                                    "<td>"+response[x].job_desc+"</td>"+
+                                    "<td>"+response[x].date_time+"</td>"+
+                                    "<td>"+
+                                        '<a onclick="popUpUpdate('+response[x].detail_experience_id+', typeOfData)" class="btn btn-primary text-white"><i class="fa fa-edit"></i></a> '+
+                                        '<a onclick="deleteData('+response[x].detail_experience_id+', typeOfData)" class="btn btn-danger text-white"><i class="fa fa-trash"></i></a> '+
+                                    '</td>'+
+                                "<tr>";
+                            break;
+                        }
                     }
-                    if(typeof response[0].detail_intern_id ==="undefined" ){
+                    if(typeof firstId ==="undefined"){
                         detailTable.innerHTML = '<tr><td colspan="4" class="text-center">No data available in table</td></tr>';
                     }else{
                         detailTable.innerHTML = '';
