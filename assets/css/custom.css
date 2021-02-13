@@ -1,0 +1,723 @@
+.panel {
+	background: transparent;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	/* border: none; */
+	/* WHY?
+	+ .panel {
+		margin-top: 35px;
+	}*/;
+}
+
+.panel-heading {
+	background: #f6f6f6;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 1px solid #DADADA;
+	padding: 18px;
+	position: relative;
+}
+
+.panel-heading.bg-primary {
+	background: #cccccc;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-secondary {
+	background: #e36159;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-tertiary {
+	background: #2baab1;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-quartenary {
+	background: #734ba9;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-success {
+	background: #47a447;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-warning {
+	background: #ed9c28;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-danger {
+	background: #d2322d;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-info {
+	background: #5bc0de;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-dark {
+	background: #171717;
+	color: white;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-heading.bg-white {
+	background: #fff;
+	border-bottom: 0 none;
+	border-right: 0 none;
+}
+
+.panel-actions {
+	right: 15px;
+	position: absolute;
+	top: 15px;
+}
+
+.panel-actions a {
+	background-color: transparent;
+	border-radius: 2px;
+	color: #b4b4b4;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	width: 24px;
+}
+
+.panel-actions a:hover {
+	background-color: #eeeeee;
+	color: #b4b4b4;
+	text-decoration: none;
+}
+
+.panel-actions a, .panel-actions a:focus, .panel-actions a:hover, .panel-actions a:active, .panel-actions a:visited {
+	outline: none !important;
+	text-decoration: none !important;
+}
+
+.panel-title {
+	color: #33353f;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 20px;
+	padding: 0;
+	text-transform: none;
+}
+
+.panel-subtitle {
+	color: #808697;
+	font-size: 12px;
+	line-height: 1.2em;
+	margin: 7px 0 0;
+	padding: 0;
+}
+
+.panel-body {
+	background: #fdfdfd;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    height:100%;
+}
+
+.panel-body-nopadding {
+	padding: 0;
+}
+
+.panel-heading + .panel-body {
+	border-radius: 0 0 5px 5px;
+}
+
+.panel-footer {
+	border-radius: 0 0 5px 5px;
+	margin-top: -5px;
+}
+
+.panel-footer-btn-group {
+	display: table;
+	width: 100%;
+	padding: 0;
+}
+
+.panel-footer-btn-group a {
+	background-color: #f5f5f5;
+	display: table-cell;
+	width: 1%;
+	border-left: 1px solid #ddd;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+.panel-footer-btn-group a:hover {
+	background-color: #f0f0f0;
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.1) inset;
+}
+
+.panel-footer-btn-group a:first-child {
+	border-left: none;
+}
+
+.panel-body.bg-primary {
+	background: #cccccc;
+	color: white;
+}
+
+.panel-body.bg-secondary {
+	background: #e36159;
+	color: white;
+}
+
+.panel-body.bg-tertiary {
+	background: #2baab1;
+	color: white;
+}
+
+.panel-body.bg-quartenary {
+	background: #734ba9;
+	color: white;
+}
+
+.panel-body.bg-success {
+	background: #47a447;
+	color: white;
+}
+
+.panel-body.bg-warning {
+	background: #ed9c28;
+	color: white;
+}
+
+.panel-body.bg-danger {
+	background: #d2322d;
+	color: white;
+}
+
+.panel-body.bg-info {
+	background: #5bc0de;
+	color: white;
+}
+
+.panel-body.bg-dark {
+	background: #171717;
+	color: white;
+}
+
+.panel-featured {
+	border-top: 3px solid #33353f;
+}
+
+.panel-featured .panel-heading {
+	border-radius: 0;
+}
+
+.panel-featured-top {
+	border-top: 3px solid #33353f;
+}
+
+.panel-featured-right {
+	border-right: 3px solid #33353f;
+}
+
+.panel-featured-bottom {
+	border-bottom: 3px solid #33353f;
+}
+
+.panel-featured-left {
+	border-left: 3px solid #33353f;
+}
+
+.panel-featured-primary {
+	border-color: #cccccc;
+}
+
+.panel-featured-primary .panel-title {
+	color: #cccccc;
+}
+
+.panel-featured-secondary {
+	border-color: #e36159;
+}
+
+.modal-block {
+	background: transparent;
+	padding: 0;
+	text-align: left;
+	max-width: 600px;
+	margin: 40px auto;
+	position: relative;
+}
+
+.modal-block.modal-block-xs {
+	max-width: 200px;
+}
+
+.modal-block.modal-block-sm {
+	max-width: 400px;
+}
+
+.modal-block.modal-block-md {
+	max-width: 600px;
+}
+
+.modal-block.modal-block-lg {
+	max-width: 900px;
+}
+
+.modal-block.modal-block-full {
+	max-width: 98%;
+}
+
+.modal-block.modal-header-color .panel-heading h2 {
+	color: #FFF;
+}
+
+.modal-block.modal-full-color {
+	color: #FFF;
+}
+
+.modal-block.modal-full-color .panel-heading {
+	border: 0;
+}
+
+.modal-block.modal-full-color .panel-heading h2 {
+	color: #FFF;
+}
+
+.modal-block.modal-full-color .panel-footer {
+	border: 0;
+}
+
+.modal-block.modal-full-color .panel-body {
+	background-color: transparent;
+}
+
+.modal-block.modal-full-color .fa {
+	color: #FFF !important;
+}
+
+/* Modal Wrapper */
+.modal-wrapper {
+	position: relative;
+	padding: 25px 0;
+}
+
+/* Modal Icon */
+.modal-icon {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+.modal-icon .fa {
+	font-size: 52px;
+	position: relative;
+	top: -10px;
+	color: #cccccc;
+}
+
+.modal-icon.center {
+	float: none;
+	width: auto;
+	padding-top: 20px;
+}
+
+.modal-icon.center + .modal-text {
+	float: none;
+	width: auto;
+}
+
+.modal-icon + .modal-text {
+	float: left;
+	width: 80%;
+}
+
+/* Modal Text */
+.modal-text {
+	padding: 0 5px;
+}
+
+.modal-text h1, .modal-text h2, .modal-text h3, .modal-text h4, .modal-text h5, .modal-text h6 {
+	padding: 0;
+	margin: -7px 0 4px 0;
+}
+
+.modal-block-primary .fa {
+	color: #cccccc;
+}
+
+.modal-block-primary.modal-header-color .panel-heading {
+	background-color: #cccccc;
+}
+
+.modal-block-primary.modal-full-color .panel {
+	background-color: #e0e0e0;
+}
+
+.modal-block-primary.modal-full-color .panel-heading {
+	background-color: #cccccc;
+}
+
+.modal-block-primary.modal-full-color .panel-footer {
+	background-color: #e0e0e0;
+}
+
+.modal-block-success .fa {
+	color: #47a447;
+}
+
+.modal-block-success.modal-header-color .panel-heading {
+	background-color: #47a447;
+}
+
+.modal-block-success.modal-full-color .panel {
+	background-color: #5cb85c;
+}
+
+.modal-block-success.modal-full-color .panel-heading {
+	background-color: #47a447;
+}
+
+.modal-block-success.modal-full-color .panel-footer {
+	background-color: #5cb85c;
+}
+
+.modal-block-warning .fa {
+	color: #ed9c28;
+}
+
+.modal-block-warning.modal-header-color .panel-heading {
+	background-color: #ed9c28;
+}
+
+.modal-block-warning.modal-full-color .panel {
+	background-color: #f0ad4e;
+}
+
+.modal-block-warning.modal-full-color .panel-heading {
+	background-color: #ed9c28;
+}
+
+.modal-block-warning.modal-full-color .panel-footer {
+	background-color: #f0ad4e;
+}
+
+.modal-block-danger .fa {
+	color: #d2322d;
+}
+
+.modal-block-danger.modal-header-color .panel-heading {
+	background-color: #d2322d;
+}
+
+.modal-block-danger.modal-full-color .panel {
+	background-color: #d9534f;
+}
+
+.modal-block-danger.modal-full-color .panel-heading {
+	background-color: #d2322d;
+}
+
+.modal-block-danger.modal-full-color .panel-footer {
+	background-color: #d9534f;
+}
+
+.modal-block-info .fa {
+	color: #5bc0de;
+}
+
+.modal-block-info.modal-header-color .panel-heading {
+	background-color: #5bc0de;
+}
+
+.modal-block-info.modal-full-color .panel {
+	background-color: #7dcde5;
+}
+
+.modal-block-info.modal-full-color .panel-heading {
+	background-color: #5bc0de;
+}
+
+.modal-block-info.modal-full-color .panel-footer {
+	background-color: #7dcde5;
+}
+
+.modal-block-dark .fa {
+	color: #171717;
+}
+
+.modal-block-dark.modal-header-color .panel-heading {
+	background-color: #171717;
+}
+
+.modal-block-dark.modal-full-color .panel {
+	background-color: #2b2b2b;
+}
+
+.modal-block-dark.modal-full-color .panel-heading {
+	background-color: #171717;
+}
+
+.modal-block-dark.modal-full-color .panel-footer {
+	background-color: #2b2b2b;
+}
+
+html.dark .modal-content {
+	background-color: #1d2127;
+}
+
+html.dark .modal-header,
+html.dark .modal-footer {
+	border-color: #282d36;
+}
+
+/* Close */
+.mfp-close,
+.mfp-close-btn-in .mfp-close {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	color: #838383;
+}
+
+/* No Margins */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+/* Zoom */
+.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg {
+	opacity: 0.001;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+	opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+/* Animnate */
+.my-mfp-zoom-in .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0;
+}
+
+.my-mfp-zoom-in.mfp-bg {
+	opacity: 0.001;
+	/* Chrome opacity transition bug */
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out;
+}
+
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	-webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	-moz-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	-ms-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	-o-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	transform: translateY(-20px) perspective(600px) rotateX(10deg);
+}
+
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	-webkit-transform: translateY(0) perspective(600px) rotateX(0);
+	-moz-transform: translateY(0) perspective(600px) rotateX(0);
+	-ms-transform: translateY(0) perspective(600px) rotateX(0);
+	-o-transform: translateY(0) perspective(600px) rotateX(0);
+	transform: translateY(0) perspective(600px) rotateX(0);
+}
+
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	-moz-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	-ms-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	-o-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+	transform: translateY(-10px) perspective(600px) rotateX(10deg);
+}
+
+.my-mfp-slide-bottom.mfp-bg {
+	opacity: 0.01;
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out;
+}
+
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+/* Dialog */
+.dialog {
+	background: white;
+	padding: 20px 30px;
+	text-align: left;
+	margin: 40px auto;
+	position: relative;
+	max-width: 600px;
+}
+
+.dialog.dialog-xs {
+	max-width: 200px;
+}
+
+.dialog.dialog-sm {
+	max-width: 400px;
+}
+
+.dialog.dialog-md {
+	max-width: 600px;
+}
+
+.dialog.dialog-lg {
+	max-width: 900px;
+}
+
+/* White Popup Block */
+.white-popup-block {
+	background: #FFF;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 600px;
+	margin: 40px auto;
+	position: relative;
+}
+
+.white-popup-block.white-popup-block-xs {
+	max-width: 200px;
+}
+
+.white-popup-block.white-popup-block-sm {
+	max-width: 400px;
+}
+
+.white-popup-block.white-popup-block-md {
+	max-width: 600px;
+}
+
+.white-popup-block.white-popup-block-lg {
+	max-width: 900px;
+}
+
+/* Dark */
+html.dark .white-popup-block,
+html.dark .dialog {
+	background: #1d2127;
+}
+
+/*
+Animate.css - http: //daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+.appear-animation {
+	opacity: 0;
+}
+
+.appear-animation-visible {
+	opacity: 1;
+}
+
+.animated,
+.appear-animation {
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+}
